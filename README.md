@@ -92,6 +92,40 @@ void deleteTask() {
 
 int main() {
     int choice;
+    while (1) {
+        printf("\n--- Badmoshi nhi mittar. ye rhi tumhari to do list ---\n");
+        printf("1. Add Task\n");
+        printf("2. View Tasks\n");
+        printf("3. Mark Task as Done\n");
+        printf("4. Delete Task\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                addTask();
+                saveTasks();
+                break;
+            case 2:
+                viewTasks();
+                break;
+            case 3:
+                markTaskDone();
+                saveTasks();
+                break;
+            case 4:
+                deleteTask();
+                saveTasks();
+                break;
+            case 5:
+                saveTasks();
+                printf("Ram ram laddar!\n");
+                exit(0);
+            default:
+                printf("badmoshi nhi chhote. invalid option\n");
+        }
+    }
+}
 
    
     
